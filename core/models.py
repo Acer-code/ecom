@@ -56,9 +56,10 @@ class MyBlog(models.Model):
     blog_desc_5 = models.TextField(blank=True,null=True)
     blog_conclusion_h=models.CharField(max_length=500,blank=True,null=True)
     blog_desc_conc = models.TextField(blank=True,null=True)
-   
-    img_1 = models.ImageField(upload_to='blog/')
-    img_2 = models.ImageField(upload_to='blog/',blank=True,null=True)
+    img_1 = CloudinaryField('blog-images/')
+    img_2 = CloudinaryField('blog-images/',blank=True,null=True)
+    # img_1 = models.ImageField(upload_to='blog/')
+    # img_2 = models.ImageField(upload_to='blog/',blank=True,null=True)
     blog_post_date =models.DateField(auto_now_add=True,null=True)
     def __str__(self):
       return self.blog_title
@@ -75,8 +76,8 @@ class MyBlog(models.Model):
 class Event(models.Model):
     event_name = models.CharField(max_length=300)
     event_date = models.DateField(auto_now_add=False)
-    event_img = models.ImageField(upload_to='events/')
-
+    # event_img = models.ImageField(upload_to='events/')
+    event_img = CloudinaryField('events/')
     def __str__(self):
         return self.event_name
     
