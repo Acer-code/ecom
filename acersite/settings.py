@@ -115,12 +115,12 @@ DATABASES = {
         #production
         'PASSWORD': os.environ.get('DB_PASSWORD'),
 
-        'HOST': 'postgres.railway.internal',
+        # 'HOST': 'postgres.railway.internal',
         # local host
-        # 'HOST': 'crossover.proxy.rlwy.net',
-        'PORT': '5432',
+        'HOST': 'crossover.proxy.rlwy.net',
+        # 'PORT': '5432',
 # local host
-        # 'PORT': '52079',
+        'PORT': '52079',
     }
 }
 # Password validation
