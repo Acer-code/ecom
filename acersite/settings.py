@@ -115,7 +115,9 @@ DATABASES = {
         #production
         'PASSWORD': os.environ.get('DB_PASSWORD'),
 
-        'HOST': 'crossover.proxy.rlwy.net',
+        'HOST': 'postgres.railway.internal',
+        # local host
+        # 'HOST': 'crossover.proxy.rlwy.net',
         'PORT': '52079',
     }
 }
