@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+ {% load static %}
+ {% block content %}
+        <!-- Breadcrumbs -->
+		<div class="breadcrumbs overlay">
+			<div class="container">
+				<div class="bread-inner">
+					<div class="row">
+						<div class="col-12">
+							<h2>{{product.Product_Name}}</h2>
+							<ul class="bread-list">
+								<li><a href="{% url 'index' %}">Home</a></li>
+								<li><i class="icofont-simple-right"></i></li>
+								<li class="active">{{subcategory.name}}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+
+        <section class="product-header section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12">
+                        <div class="image_wrapper">
+                            <img src="{{product.img.url}}" alt="{{product.Product_Name}}">
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-12">
+                        <h2 class="product-title">{{product.Product_Name}}</h2>
+                        <h2 class="product-title">{{product.model_no}}</h2>
+                        {% if product.catalog %}
+                        <a href="{{product.product_catelog.url}}" class="download-btn btn" target="_blank"><i class="fa fa-download"></i>Download Brochure</a>
+                        {% else %}
+                        <a href="" class="download-btn btn" target="_blank"><i class="fa fa-download"></i>Download Brochure</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-description section-gap bottom-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-left">
+                            <h3>Features</h3>
+                        <!-- description-content -->
+                            <ul class="list">
+								{% for feat in product.features.splitlines %}
+                                <li><i class="fa fa-caret-right"></i>{{feat}}</li>
+								{% endfor %}
+								{% comment %}
+                                <li><i class="fa fa-caret-right"></i>12.1” color TFT LCD with adjustable brightness and volume, displaying seven waveforms.</li>
+                                <li><i class="fa fa-caret-right"></i>Sleek design with a foldable handle and multilingual support.</li>
+                                <li><i class="fa fa-caret-right"></i>User-friendly interface with pop-up menus, dialogue boxes, and a rotary mouse.</li>
+                                <li><i class="fa fa-caret-right"></i>Low power consumption with standby mode and a rechargeable battery.</li>
+                                <li><i class="fa fa-caret-right"></i>Accurate BP measurement, SpO₂ in low perfusion, drug calculation, ST detection, pacemaker, and arrhythmia analysis.</li>
+                                <li><i class="fa fa-caret-right"></i>OxyCRG, seven-lead ECG, and big-font mode with customizable sound and light alarms.</li>
+								{% endcomment %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  {% endblock %}

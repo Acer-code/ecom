@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	
+
+        <!-- Breadcrumbs -->
+		<div class="breadcrumbs overlay">
+			<div class="container">
+				<div class="bread-inner">
+					<div class="row">
+						<div class="col-12">
+							<h2>About Us</h2>
+							<ul class="bread-list">
+								<li><a href="{% url 'index' %}">Home</a></li>
+								<li><i class="icofont-simple-right"></i></li>
+								<li class="active">About Us</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+
+        <!-- who-we-are-start -->
+		 <section class="who-we-are section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<div class="content-left">
+							<h3>Know us better</h3>
+                            <p>At Acer Biomedicals, we are committed to revolutionizing healthcare with cutting-edge medical equipment that ensures precision, reliability, and innovation. As a leading manufacturer, we deliver a vast range of high-quality products designed to enhance patient care and streamline medical operations.</p>
+                            <p><strong>Certified with ISO 9001:13485, CDSCO, and CE Certifications</strong>, we uphold the highest standards of safety and excellence.</p>
+                            <p>Our mission is to empower healthcare professionals with advanced, efficient, and trusted solutions— <strong>"Where technology meets compassion in healthcare."</strong></p>
+					    </div>
+                    </div>
+					<div class="col-lg-6 col-12 block-img">
+                        <img src="{% static 'img/who-we.avif' %}" alt="image">
+                        <!-- <img src="{% static 'img/who-we.jpeg' %}" alt="image"> -->
+                    </div>
+				</div>
+			</div>
+		 </section>
+		 <!-- who-we-are-end -->
+        <!-- counter-wrap -->
+         <section class="middle section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>Certified Healthcare Excellence</h2>
+                        </div>
+                        <p>With unwavering dedication to excellence, we uphold the highest compliance standards, including <strong>ISO 9001:13485, CDSCO, and CE</strong> certifications, ensuring our products are not just reliable, and qualitative but transformative. By empowering healthcare professionals with state-of-the-art, efficient, and precise equipment, we aim to enhance patient outcomes and fortify healthcare infrastructure across the globe.  </p>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- counter-wrap -->
+<!-- director-section -->
+<section class="director section">
+	<div class="container">
+		<div class="section-title">
+			<h2>A Visionary Leader</h2>
+			<img src="{% static 'img/section-img.avif' %}" alt="#">
+			<!-- <img src="{% static 'img/section-img.png' %}" alt="#"> -->
+		</div>
+		<h3></h3>
+		<div class="row">
+			<div class="col-lg-6 col-12">
+				<div class="block-img">
+					<img src="{% static 'img/dir.avif' %}" alt="director_img">
+					<!-- <img src="{% static 'img/dir.jpg' %}" alt="director_img"> -->
+				</div>
+			</div>
+			<div class="col-lg-6 col-12">
+				<div class="content-left">
+					<h3>Prashant Sharma</h3>
+					<h2>Director</h2>
+					<p>
+						Acer has established itself as a trusted name in the medical equipment industry, driven by innovation, precision, and a commitment to excellence. At the heart of this success is the visionary leadership of our Director, whose strategic guidance and dedication have propelled the company to new heights.
+						With a strong focus on research and development, Acer continuously strives to create advanced, reliable, and high-quality medical solutions that meet the evolving needs of the healthcare sector. 
+						<br>
+						<br>
+						Beyond innovation, Acer values integrity, customer satisfaction, and continuous improvement. Our Director's leadership fosters a culture of quality, efficiency, and teamwork, driving us forward in an ever-evolving industry. As we expand our capabilities, our mission remains steadfast: to provide world-class medical equipment that makes a meaningful impact on healthcare worldwide.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+ </section>
+ <!-- director-section -->
+        <section class="services section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>What We Offer</h2>
+							<img src="{% static 'img/section-img.avif' %}" alt="#">
+							<!-- <img src="{% static 'img/section-img.png' %}" alt="#"> -->
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<div class="service-icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+							<h4>Product Development</h4>
+							<p>Designing and prototyping custom medical devices tailored to client needs.
+								Research and development (R&D) for new medical technologies.
+								Collaboration with healthcare providers to design user-friendly equipment.
+							</p>
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<div class="service-icon"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+							<h4>Equipment Servicing</h4>
+							<p>On-site and off-site maintenance of medical equipment.
+								Scheduled servicing to ensure optimal performance.
+								Calibration and certification of devices.
+							</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<div class="service-icon"><i class="fa fa-wrench" aria-hidden="true"></i></div>
+							<h4>Installation Training</h4>
+							<p>On-site setup and configuration of devices.
+								Hands-on training for healthcare professionals and technicians.
+								User manuals and video tutorials for product usage.
+							</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<div class="service-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+							<h4>Quality Assurance</h4>
+							<p>Functional testing to ensure product reliability.
+								Stress and performance testing of medical equipment.
+								Sterilization and hygiene validation services.
+							</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<div class="service-icon"><i class="fa fa-cubes" aria-hidden="true"></i></div>
+							<h4>Supply Chain</h4>
+							<p>Providing just-in-time delivery services.
+								Warehousing and distribution for medical equipment.
+								Managing the full lifecycle of the equipment, from production to delivery.
+							</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<div class="service-icon"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+							<h4>After Sales</h4>
+							<p>Warranty management and extended service plans.
+								Helpdesk support for troubleshooting issues.
+								Spare parts replacement services.
+							</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <!-- certify-section -->
+         <section class="client section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-title">
+							<h2>OUR CERTIFICATIONS</h2>
+							<img src="{% static 'img/section-img.avif' %}" alt="#">
+							<!-- <img src="{% static 'img/section-img.png' %}" alt="#"> -->
+						</div>
+                        <div class="testimonial2">
+                            <div class="testimonial__item">
+                                <img src="{% static 'img/certify/iso.avif' %}" class="testimonial_img"/>
+                                <!-- <img src="{% static 'img/certify/iso.png' %}" class="testimonial_img"/> -->
+                            </div>
+                            <div class="testimonial__item">
+                                <img src="{% static 'img/certify/cdsco.avif' %}" class="testimonial_img"/>
+                                <!-- <img src="{% static 'img/certify/cdsco.png' %}" class="testimonial_img"/> -->
+                            </div>
+                            <div class="testimonial__item">
+                                <img src="{% static 'img/certify/ce.avif' %}" class="testimonial_img"/>
+                                <!-- <img src="{% static 'img/certify/ce.png' %}" class="testimonial_img"/> -->
+                            </div>
+                            <div class="testimonial__item">
+                                <img src="{% static 'img/certify/iso2.avif' %}" class="testimonial_img"/>
+                                <!-- <img src="{% static 'img/certify/iso2.png' %}" class="testimonial_img"/> -->
+                            </div>
+                        </div>
+					</div>
+				</div>
+                
+			</div>
+		 </section>
+         <!-- certify-section -->
+
+
+{% endblock %}

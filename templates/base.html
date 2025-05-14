@@ -1,0 +1,307 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="medical device manufacturer, medical equipment supplier, patient monitoring systems, infusion pumps, critical care devices, ICU equipment, CE certified medical devices, ISO 13485 medical devices, healthcare technology, biomedical equipment, Acer Biomedicals, Accure Medical, medical device supplier, diagnostic equipment, medical device company, Personal Healthcare, In-Vitro Diagnostics, Bio Chemistry Analyzer, Blood Gas analyzer, Defibrillator, ECG Machine, Suction machine, infusion pump, syrings pump, healthcare solutions">
+
+		<meta name="description" content="Acer Biomedicals is a leading medical device manufacturer and supplier in India, offering a wide range of high-quality medical equipment, patient monitoring systems, infusion pumps, critical care devices, and more. Our products are CE certified and ISO 13485 compliant.">
+		<meta name="author" content="Acer Biomedicals">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>{% block title %}{{title}}{% endblock %}</title>
+
+		
+		
+		<!-- Favicon -->
+        <link rel="icon" href="{% static 'img/acerlogo-.png' %}">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="{% static 'css/icofont.css' %}">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'css/slick.css' %}">
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+		<script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=NLRkNWcDynbP"></script>		
+    </head>
+    <body>
+	
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <img src="{% static 'img/loader.svg' %}" alt="loader-img">
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+		
+
+		<!-- Header Area -->
+		<header class="header" >
+			<!-- Topbar -->
+			<div class="topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-5 col-12">
+							<!-- Top Contact -->
+							<ul class="top-contact">
+								<li><i class="fa fa-phone"></i><a href="callto:0120-4166921">0120-4166921</a></li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:info@acerbiomed.com">info@acerbiomed.com</a></li>
+							</ul>
+							<!-- End Top Contact -->
+							 
+							<!-- <div class="search-box me-5">
+								<form class="d-flex input-group bg-transparent" method="GET"
+									action="{% url 'product_search' %}">
+									<input class="form-control py-2 pr-5 mr-1 " type="search" placeholder="Search"
+										aria-label="Search" name="query" value="{{ request.GET.query }}">
+									<button class="input-group-text border-0 bg-transparent ml-n5" type="submit"><i
+											class="fa fa-search" aria-hidden="true"></i></button>
+								</form>
+	
+							</div> -->
+						</div>
+						
+						<div class="col-lg-6 col-md-7 col-12">
+							<!-- Contact -->
+							<ul class="top-link">
+								<li><a href="https://www.facebook.com/profile.php?id=100089957828685"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://x.com/Acer_biomedical"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="www.youtube.com/@acerbiomedicalsllp"><i class="fa fa-youtube"></i></a></li>
+								<li><a href="https://www.linkedin.com/in/prashant-sharma-7424b727a"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://in.pinterest.com/acerbiomedicals/"><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="https://www.instagram.com/acer_biomedicals/"><i class="fa fa-instagram"></i></a></li>
+							</ul>
+							<!-- End Contact -->
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Topbar -->
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-2 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-9 col-md-10 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li class="active"><a href="{% url 'index' %}">Home <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="{% url 'index' %}">Visit Us</a></li>
+												</ul>
+											</li>
+											<li><a href="{% url 'about' %}">About Us </a></li>
+											<li class="has-dropdown"><a href="#">Products <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													{% for category in categories %}
+													<li class="has-sub-dropdown">
+														<a href="#">{{ category.category_name }} &raquo;</a>
+														<ul class="sub-dropdown nav-height">
+															{% for subcategory in category.subcategories.all %}
+																<li><a href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a></li>
+															{% endfor %}
+														</ul>
+													</li>
+												{% endfor %}
+													
+												</ul>
+											</li>
+											<li><a href="{% url 'certification' %}">Certification</a></li>
+											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="{% url 'main_blog' %}">Blog</a></li>
+												</ul>
+											</li>
+											<li class="get-quote"><a href="{% url 'contact_us' %}">Contact</a></li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+		{% block content %}
+
+		{% endblock %}
+		<!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-12">
+							<div class="single-footer f-link">
+								<h2>Quick Links</h2>
+									<ul>
+										<li><a href="{% url 'index' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+										<li><a href="{% url 'about' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+										<li><a href="{% url 'main_blog' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>Blog</a></li>
+										<li><a href="{% url 'certification' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>Certification</a></li>
+										<li><a href="{% url 'contact_us' %}"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>	
+									</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-12">
+							<div class="single-footer f-link">
+								<h2>Our Products</h2>
+									<ul>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Critical Care Monitoring & <br> Life Support</a></li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> In Vitro Diagnostics</a></li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Personal Healthcare</a></li>
+									</ul>
+							</div>
+						</div>
+						<div class="col-lg-6 col-12">
+							<div class="row">
+								<div class="col-lg-6 col-12">
+									<div class="single-footer f-link">
+										<h2>Acer Biomedicals</h2>
+										<p class="f-head">Registered Office</p>
+										<p>Industrial Unit - 80, G Block, Sector 63, Noida, Uttar Pradesh 201301</p>
+										<ul>
+											<li>
+												<a href="callto:0120-4166921"><i class="fa fa-phone"></i>0120-4166921</a>
+											</li>
+											<li>
+												<a href="mailto:info@acerbiomed.com"><i class="fa fa-envelope"></i>info@acerbiomed.com</a>
+											</li>
+										</ul>
+										<p class="f-head">Our Tollfree Number</p>
+										<p><a href="callto:18008894232">1800-889-4232</a></p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-12">
+									<div class="single-footer f-link">
+										<div class="left-content">
+											<h4>For Sales Enquiry</h4>
+											<ul>
+												<li>
+													<a href="mailto:sales@acerbiomed.com"><i class="fa fa-envelope"></i>sales@acerbiomed.com</a>
+												</li>
+											</ul>
+											<ul class="time-sidual">
+												<p class="f-head">Our Services Time</p>
+												<li class="day">Monday - Saturday</li>
+												<li>10.00 A.M To 06.30 P.M</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- Social -->
+								<ul class="social">
+									<li><a href="https://www.facebook.com/profile.php?id=100089957828685"><i class="icofont-facebook"></i></a></li>
+									<li><a href="www.youtube.com/@acerbiomedicalsllp"><i class="icofont-youtube"></i></a></li>
+									<li><a href="https://x.com/Acer_biomedical"><i class="icofont-twitter"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/prashant-sharma-7424b727a"><i class="icofont-linkedin"></i></a></li>
+									<li><a href="https://in.pinterest.com/acerbiomedicals/"><i class="icofont-pinterest"></i></a></li>
+									<li><a href="https://www.instagram.com/acer_biomedicals/"><i class="icofont-instagram"></i></a></li>
+								</ul>
+								<!-- End Social -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Footer Top -->
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-12">
+							<div class="copyright-content">
+								<p>© Copyright 2024 Acer Biomedicals  |  All Rights Reserved  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Copyright -->
+		</footer>
+		<!--/ End Footer Area -->
+		
+		<!-- jquery Min JS -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/slick.min.js' %}"></script>
+		<!-- jquery Migrate JS -->
+		<script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
+		<!-- jquery Ui JS -->
+		<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+		<!-- Easing JS -->
+        <script src="{% static 'js/easing.js' %}"></script>
+		<!-- Color JS -->
+		<script src="{% static 'js/colors.js' %}"></script>
+		<!-- Popper JS -->
+		<script src="{% static 'js/popper.min.js' %}"></script>
+		<!-- Jquery Nav JS -->
+        <script src="{% static 'js/jquery.nav.js' %}"></script>
+		<!-- Slicknav JS -->
+		<script src="{% static 'js/slicknav.min.js' %}"></script>
+		<!-- ScrollUp JS -->
+        <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+		<!-- Niceselect JS -->
+		<script src="{% static 'js/niceselect.js' %}"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="{% static 'js/tilt.jquery.min.js' %}"></script>
+		<!-- counterup JS -->
+		<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+		<!-- Steller JS -->
+		<script src="{% static 'js/steller.js' %}"></script>
+		<!-- Wow JS -->
+		<script src="{% static 'js/wow.min.js' %}"></script>
+		<!-- Magnific Popup JS -->
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<!-- Main JS -->
+		<script src="{% static 'js/main.js' %}"></script>
+		<script src="{% static 'js/custom.js' %}"></script>
+    </body>
+</html>

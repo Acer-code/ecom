@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay">
+    <div class="container">
+        <div class="bread-inner">
+            <div class="row">
+                <div class="col-12">
+                    <h2>{{category.category_name}}</h2>
+                    <ul class="bread-list">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+                        <li class="active">{{category.category_name}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<section class="paragraph section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {% if category.category_name == 'Critical Care Monitoring' %}
+                <p class="sec_p">
+                    Critical care monitoring refers to the continuous assessment and observation of patients in critical care settings, such as intensive care units (ICUs) or emergency departments. Monitoring is crucial for promptly identifying and addressing changes in a patient's condition, ensuring optimal care and improving outcomes. We provide These product in Critical Care Monitoring Series:- Patient Monitors, Defibrillator, ECG , Ventilator, Syringe Pump, Infusion Pump, HFNC, Vein Finder, Jaundice detector
+                </p>
+                {% elif category.category_name == 'In-Vitro Diagnostics' %}
+                <p class="sec_p">
+                    In-vitro diagnostics are at the core of Acer Biomedical's Biochemistry Analyzer, a cutting-edge device designed for precise measurement of biochemical substances in biological samples such as blood and urine. Engineered for accuracy and efficiency, it delivers rapid, reliable results with minimal manual intervention, making it ideal for both clinical and laboratory settings.
+                </p>
+                {% elif category.category_name == 'Personal Healthcare' %}
+                <p class="sec_p">
+                    Personal healthcare is our priority at Acer Biomedical, and our Oxygen Concentrators are designed to provide uninterrupted, high-purity oxygen therapy at home. With advanced technology and user-friendly operation, our devices ensure efficient respiratory support, enhancing comfort and improving quality of life. Trust Acer Biomedical for seamless and reliable oxygen therapy solutions tailored for your well-being.
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- products -->
+<section class="category section-gap bottom-gap">
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="product">
+                    <div class="image_wrapper">
+                        <a href="{% url 'product_desc' product.pk %}">
+                            <img src="{{product.img.url}}" alt="patient-monitor">
+                        </a>
+                    </div>
+                    <div class="content-block">
+                        <h4><a href="{% url 'product_desc' product.pk %}" class="product-name">{{product.Product_Name}} {{product.model_no}}</a></h4>
+                        <p><a href= "{% url 'product_desc' product.pk %}" class="product-page">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center">
+                No products found
+            </p>
+            {% endfor %}
+            {% comment %}
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="product">
+                    <div class="image_wrapper">
+                        <a href="pulse-oximeter.html">
+                            <img src="../img/product-img/pulse.png" alt="pulse-oximeter">
+                        </a>
+                    </div>
+                    <div class="content-block">
+                        <h4><a href="pulse-oximeter.html" class="product-name">Pulse Oximeter</a></h4>
+                        <p><a href="pulse-oximeter.html" class="product-page">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="product">
+                    <div class="image_wrapper">
+                        <a href="infusion-pump.html">
+                            <img src="../img/product-img/infusion.png" alt="infusion-pump">
+                        </a>
+                    </div>
+                    <div class="content-block">
+                        <h4><a href="infusion-pump.html" class="product-name">Infusion Pumps</a></h4>
+                        <p><a href="infusion-pump.html" class="product-page">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="product">
+                    <div class="image_wrapper">
+                        <a href="defibrillator.html">
+                            <img src="../img/product-img/defib.png" alt="defibrillator">
+                        </a>
+                    </div>
+                    <div class="content-block">
+                        <h4><a href="defibrillator.html" class="product-name">Defibrillator</a></h4>
+                        <p><a href="defibrillator.html" class="product-page">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+            {% endcomment %}
+         </div>
+    </div>
+</section>
+<!-- products -->
+
+{% endblock %}

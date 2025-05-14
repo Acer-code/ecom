@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+		
+		<!-- Breadcrumbs -->
+		<div class="breadcrumbs overlay">
+			<div class="container">
+				<div class="bread-inner">
+					<div class="row">
+						<div class="col-12">
+							<h2>Blog Single</h2>
+							<ul class="bread-list">
+								<li><a href="../index.html">Home</a></li>
+								<li><i class="icofont-simple-right"></i></li>
+								<li class="active">Blog Single</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+		
+		<!-- Single News -->
+		<section class="news-single section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-12">
+						<div class="row">
+							<div class="col-12">
+								<div class="single-main">
+									<!-- News Head -->
+									<div class="news-head">
+										<!-- <img src="{% static 'img/blog1.jpg' %}" alt="#"> -->
+										<img src="{{ blog.img_1.url }}" alt="#">
+									</div>
+									<!-- News Title -->
+									<h1 class="news-title"><a href="news-single.html">{{blog.blog_title}}</a></h1>
+									<!-- Meta -->
+									<div class="meta">
+										<div class="meta-left">
+											<span class="date"><i class="fa fa-clock-o"></i>{{blog.blog_post_date}}</span>
+										</div>
+									</div>
+									<!-- News Text -->
+									<div class="news-text">
+										<p>{{blog.blog_desc_1}}</p>
+										<div class="image-gallery">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-12">
+													<div class="single-image">
+														<img src="{{blog.img_1.url}}" alt="#">
+													</div>
+												</div>
+												{% if blog.img_2 %}
+												<div class="col-lg-6 col-md-6 col-12">
+													<div class="single-image">
+														<img src="{{blog.img_2.url}}" alt="#">
+													</div>
+												</div>
+												{% endif %}
+											</div>
+										</div>
+										<p>{{blog.blog_desc_1}}</p>
+										
+										<blockquote class="overlay">
+											{% if blog.blog_heading_1 %}
+											<h2 class="text-white">{{blog.blog_heading_1}}</h2>
+											{% endif %}
+											{% if blog.blog_desc_2 %}
+											<p>{{blog.blog_desc_2}}</p>	
+											{% endif %}`				
+										</blockquote>
+										{% if blog.blog_heading_2 %}
+										<h2>{{blog.blog_heading_2}}</h2>
+										{% endif %}
+										{% if blog.blog_desc_3 %}
+										<p>{{blog.blog_desc_3}}</p>
+										{% endif %}
+										{% if blog.blog_heading_3 %}
+										<h2>{{blog.blog_heading_3}}</h2>
+										{% endif %}
+										{% if blog.blog_desc_4 %}
+										<p>{{blog.blog_desc_4}}</p>
+										{% endif %}
+										{% if blog.blog_heading_4 %}
+										<h2>{{blog.blog_heading_4}}</h2>
+										{% endif %}
+										{% if blog.blog_desc_5 %}
+										<p>{{blog.blog_desc_5}}</p>
+										{% endif %}
+										{% if blog.blog_conclusion_h %}
+										<h2>{{blog.blog_conclusion_h}}</h2>
+										{% endif %}
+										{% if blog.blog_desc_conc %}
+										<p>{{blog.blog_desc_conc}}</p>
+										{% endif %}
+									</div>
+									<div class="blog-bottom">
+										<!-- Social Share -->
+										<ul class="social-share">
+											<li class="facebook"><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+											<li class="twitter"><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+											<li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+											<li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+											<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-12">
+						<div class="main-sidebar">
+							<!-- Single Widget -->
+							<div class="single-widget recent-post">
+								<h3 class="title">Recent post</h3>
+								<!-- Single Post -->
+								 {% for blog in blogs %}
+								<div class="single-post">
+									<div class="image">
+										<img src="{{blog.img_1.url}}" alt="#">
+									</div>
+									<div class="content">
+										<h5><a href="{% url 'blog_single' blog.pk %}">{{blog.blog_title}}</a></h5>
+									</div>
+								</div>
+								{% endfor %}
+								<!-- End Single Post -->
+								
+							</div>
+							<!--/ End Single Widget -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Single News -->
+{% endblock %}
