@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-dev-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG =FALSE
+DEBUG =False
 
 #for deployment
 ALLOWED_HOSTS = ['*']
