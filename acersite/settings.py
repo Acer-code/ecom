@@ -22,10 +22,12 @@ import cloudinary.api
 
 
 pymysql.install_as_MySQLdb()
-load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -34,13 +36,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-ap+99+)fv@p367h23!(q^iw(dhodop^$6(wf-!_ikf_95suclq'
 
 # Production
-SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-dev-key')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG =False
 
-#for deployment
+#for production
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS =[]
 
@@ -101,16 +103,7 @@ WSGI_APPLICATION = 'acersite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'acer_db',
-#         'USER':'root',
-#         'PASSWORD':'Accumart@321',
-#         'HOST':'localhost',
-#         'PORT':'3306',
-#     }
-# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -119,11 +112,8 @@ DATABASES = {
         #production
         'PASSWORD': os.environ.get('DB_PASSWORD'),
 
-        # 'HOST': 'postgres.railway.internal',
-        # local host
         'HOST': 'crossover.proxy.rlwy.net',
-        # 'PORT': '5432',
-# local host
+
         'PORT': '52079',
     }
 }
