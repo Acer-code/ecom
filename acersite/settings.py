@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 # Add this to __init__.py in your main project folder
-import dj_database_url
+
 
 import pymysql
 import os
@@ -106,30 +106,21 @@ WSGI_APPLICATION = 'acersite.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         #production
-#         'PASSWORD': os.environ.get('DB_PASSWORD'),
-
-#         'HOST': 'crossover.proxy.rlwy.net',
-
-#         'PORT': '52079',
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
+        'NAME': 'railway',
+        'USER': 'postgres',
+        #production
         'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT'),
+
+        'HOST': 'crossover.proxy.rlwy.net',
+
+        'PORT': '52079',
     }
 }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
