@@ -3503,7 +3503,11 @@ input, textarea, select:focus {
 .footer .single-footer.f-link li a {
 	display: block;
 	color: #fff;
+<<<<<<< HEAD
 	/* text-transform: capitalize; */
+=======
+/* 	text-transform: capitalize; */
+>>>>>>> 9d4b25993e98eb870d64c3edd4e458f64b68c162
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
