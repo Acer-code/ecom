@@ -76,16 +76,7 @@
 							</ul>
 							<!-- End Top Contact -->
 							 
-							<!-- <div class="search-box me-5">
-								<form class="d-flex input-group bg-transparent" method="GET"
-									action="{% url 'product_search' %}">
-									<input class="form-control py-2 pr-5 mr-1 " type="search" placeholder="Search"
-										aria-label="Search" name="query" value="{{ request.GET.query }}">
-									<button class="input-group-text border-0 bg-transparent ml-n5" type="submit"><i
-											class="fa fa-search" aria-hidden="true"></i></button>
-								</form>
-	
-							</div> -->
+
 						</div>
 						
 						<div class="col-lg-6 col-md-7 col-12">
@@ -125,13 +116,13 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="{% url 'index' %}">Home <i class="icofont-rounded-down"></i></a>
+											<li class="{% if request.apth == '/' %}active{% endif %}"><a href="{% url 'index' %}">Home <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													<li><a href="{% url 'index' %}">Visit Us</a></li>
 												</ul>
 											</li>
-											<li><a href="{% url 'about' %}">About Us </a></li>
-											<li class="has-dropdown"><a href="#">Products <i class="icofont-rounded-down"></i></a>
+											<li class ="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"><a href="{% url 'about' %}">About Us </a></li>
+											<li class="has-dropdown {% if request.resolver_match.url_name =='product_list' %}active{% endif %}"><a href="#">Products <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													{% for category in categories %}
 													<li class="has-sub-dropdown">
@@ -146,13 +137,13 @@
 													
 												</ul>
 											</li>
-											<li><a href="{% url 'certification' %}">Certification</a></li>
-											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+											<li class="{% if request.resolver_match.url_name == 'certification' %}active{% endif %}"><a href="{% url 'certification' %}">Certification</a></li>
+											<li class ="{% if request.resolver_match.url_name == 'main_blog' %}active{% endif %}"><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													<li><a href="{% url 'main_blog' %}">Blog</a></li>
 												</ul>
 											</li>
-											<li class="get-quote"><a href="{% url 'contact_us' %}">Contact</a></li>
+											<li class="get-quote {% if request.resolver_match.url_name == 'contact_us' %}active{% endif %}"><a href="{% url 'contact_us' %}">Contact</a></li>
 										</ul>
 									</nav>
 								</div>
