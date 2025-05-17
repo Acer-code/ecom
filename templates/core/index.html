@@ -419,20 +419,22 @@
 							<!-- <img src="{% static 'img/section-img.png' %}" alt="#"> -->
 						</div>
 						<div class="testimonial3">
+							{% for event in events %}
 							<div class="testimonial__item">
 								<div class="single-news">
 									<div class="news-head">
-										<img src="{% static 'img/exhibition/mumbai.jpg' %}" alt="#">
+										<img src="{{event.event_img.url}}" alt="#">
 									</div>
 									<div class="news-body">
 										<div class="news-content">
-											<div class="date">22 Aug, 2020</div>
-											<h2>We have annnocuced our new product mumbai.</h2>
+											<div class="date">{{event.event_date}}</div>
+											<h2>{{event.event_name}}</h2>
 											
 										</div>
 									</div>
 								</div>
 							</div>
+							{% endfor %}
 							<div class="testimonial__item">
 								<div class="single-news">
 									<div class="news-head">

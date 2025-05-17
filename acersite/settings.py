@@ -22,24 +22,34 @@ import cloudinary.api
 
 
 pymysql.install_as_MySQLdb()
-load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+#Production
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ap+99+)fv@p367h23!(q^iw(dhodop^$6(wf-!_ikf_95suclq'
+# SECRET_KEY = 'django-insecure-ap+99+)fv@p367h23!(q^iw(dhodop^$6(wf-!_ikf_95suclq'
+
+# Production
+# '''
+SECRET_KEY = os.environ.get('SECRET_KEY')
+# '''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#for deployment
+#for Production
+'''
+ALLOWED_HOSTS =  os.getenv("DJANGO_ALLOWED_HOSTS", "").split(",")
+CSRF_TRUSTED_ORIGINS =['https://www.acerbiomedicals.com']
+'''
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS =[]
-
 #for the localhost
 # ALLOWED_HOSTS = []
 
@@ -76,7 +86,7 @@ ROOT_URLCONF = 'acersite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,7 +112,7 @@ WSGI_APPLICATION = 'acersite.wsgi.application'
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'acer_db',
 #         'USER':'root',
-#         'PASSWORD':'Accumart@321',
+#         'PASSWORD':os.environ.get('LOCAL_DB_PASSWORD'),
 #         'HOST':'localhost',
 #         'PORT':'3306',
 #     }
@@ -178,3 +188,12 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
+
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'DENY'
