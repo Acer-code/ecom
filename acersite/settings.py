@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 # Add this to __init__.py in your main project folder
-
-
 import pymysql
 import os
 from dotenv import load_dotenv
@@ -24,22 +22,13 @@ import cloudinary.api
 
 
 pymysql.install_as_MySQLdb()
-<<<<<<< HEAD
 
-=======
->>>>>>> 9d4b25993e98eb870d64c3edd4e458f64b68c162
 
-load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-<<<<<<< HEAD
 #Production
 load_dotenv(os.path.join(BASE_DIR, '.env'))
-=======
-
-# load_dotenv(os.path.join(BASE_DIR, '.env'))
->>>>>>> 9d4b25993e98eb870d64c3edd4e458f64b68c162
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -48,27 +37,18 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 # SECRET_KEY = 'django-insecure-ap+99+)fv@p367h23!(q^iw(dhodop^$6(wf-!_ikf_95suclq'
 
 # Production
-<<<<<<< HEAD
 # '''
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # '''
-=======
-SECRET_KEY = os.environ.get('SECRET_KEY')
->>>>>>> 9d4b25993e98eb870d64c3edd4e458f64b68c162
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG =False
+DEBUG = True
 
-<<<<<<< HEAD
 #for Production
 '''
 ALLOWED_HOSTS =  os.getenv("DJANGO_ALLOWED_HOSTS", "").split(",")
 CSRF_TRUSTED_ORIGINS =['https://www.acerbiomedicals.com']
 '''
-=======
-#for production
->>>>>>> 9d4b25993e98eb870d64c3edd4e458f64b68c162
 ALLOWED_HOSTS = ['*']
 #for the localhost
 # ALLOWED_HOSTS = []
@@ -127,7 +107,6 @@ WSGI_APPLICATION = 'acersite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-<<<<<<< HEAD
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -138,9 +117,6 @@ WSGI_APPLICATION = 'acersite.wsgi.application'
 #         'PORT':'3306',
 #     }
 # }
-=======
-
->>>>>>> 9d4b25993e98eb870d64c3edd4e458f64b68c162
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -150,12 +126,9 @@ DATABASES = {
         'PASSWORD': os.environ.get('DB_PASSWORD'),
 
         'HOST': 'crossover.proxy.rlwy.net',
-
         'PORT': '52079',
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 

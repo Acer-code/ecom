@@ -56,22 +56,15 @@ class MyBlog(models.Model):
     blog_desc_5 = models.TextField(blank=True,null=True)
     blog_conclusion_h=models.CharField(max_length=500,blank=True,null=True)
     blog_desc_conc = models.TextField(blank=True,null=True)
-<<<<<<< HEAD
-   
-    # img_1 = models.ImageField(upload_to='blog/')
-    # img_2 = models.ImageField(upload_to='blog/',blank=True,null=True)
     img_1 = CloudinaryField('blog-images/')
-    img_2 = CloudinaryField('blog-images/',blank=True,null=True)
-=======
-    img_1 = CloudinaryField('blog-images/')
-    img_2 = CloudinaryField('blog-images/',blank=True,null=True)
+    img_2 = CloudinaryField('blog-images/', blank=True, null=True)
     # img_1 = models.ImageField(upload_to='blog/')
-    # img_2 = models.ImageField(upload_to='blog/',blank=True,null=True)
->>>>>>> 9d4b25993e98eb870d64c3edd4e458f64b68c162
+    # img_2 = models.ImageField(upload_to='blog/', blank=True, null=True)
     blog_post_date =models.DateField(auto_now_add=True,null=True)
+
     def __str__(self):
-      return self.blog_title
-    
+        return self.blog_title
+        
     def image(self):
         if self.img_1:
             return mark_safe(f'<img src="{self.img_1.url}" height="50" />')
@@ -84,17 +77,9 @@ class MyBlog(models.Model):
 class Event(models.Model):
     event_name = models.CharField(max_length=300)
     event_date = models.DateField(auto_now_add=False)
-<<<<<<< HEAD
     event_img = CloudinaryField('events/')
     # event_img = models.ImageField(upload_to='events/')
 
-=======
-    # event_img = models.ImageField(upload_to='events/')
-    event_img = CloudinaryField('events/')
->>>>>>> 9d4b25993e98eb870d64c3edd4e458f64b68c162
-    def __str__(self):
-        return self.event_name
-    
     def image(self):
         if self.event_img:
             return mark_safe(f'<img src="{self.event_img.url}" height="50" />')
